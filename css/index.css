@@ -18,9 +18,20 @@ header {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 580px) {
+  header img {
+    display: block;
+    margin: auto;
+  }
+}
 header ul {
   display: flex;
   gap: 3.5rem;
+}
+@media (max-width: 580px) {
+  header ul {
+    display: none;
+  }
 }
 header ul a {
   text-decoration: none;
@@ -38,9 +49,31 @@ header ul a:hover {
   margin-top: 6rem;
   margin-bottom: 6rem;
 }
+@media (max-width: 900px) {
+  .section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 450px) {
+  .section {
+    width: 100%;
+  }
+  .section img {
+    display: none;
+  }
+}
 .section-div {
   width: 60%;
   text-align: center;
+}
+@media (max-width: 580px) {
+  .section-div {
+    width: 90%;
+  }
 }
 .section-div h1 {
   font-family: "JetBrains Mono", monospace;
@@ -68,12 +101,22 @@ footer p {
   margin: auto;
   padding: 1.5rem;
 }
+@media (max-width: 450px) {
+  footer p {
+    width: 100%;
+  }
+}
 
 .padlock {
   position: fixed;
   bottom: 0;
   left: 0;
   margin: 1rem;
+}
+@media (max-width: 450px) {
+  .padlock {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

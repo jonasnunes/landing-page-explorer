@@ -1,4 +1,5 @@
 @use 'variables'
+@use 'mixins'
 
 *
     margin: 0
@@ -16,10 +17,16 @@ body
 header
     display: flex
     justify-content: space-between
+    @include mixins.quebra2 
+        img
+            display: block
+            margin: auto
 
     ul
         display: flex
         gap: 3.5rem
+        @include mixins.quebra2 
+            display: none
 
         a
             text-decoration: none
@@ -35,10 +42,22 @@ header
     justify-content: space-between
     margin-top: 6rem
     margin-bottom: 6rem
+    @include mixins.quebra1 
+        display: flex
+        flex-direction: column
+        gap: 2rem
+        justify-content: center
+        align-items: center
+    @include mixins.quebra3 
+        width: 100%
+        img
+            display: none
 
     &-div
         width: 60%
         text-align: center
+        @include mixins.quebra2 
+            width: 90%
 
         h1
             font-family: variables.$fonte-secundaria
@@ -64,9 +83,13 @@ footer p
     width: 55%
     margin: auto
     padding: 1.5rem
+    @include mixins.quebra3 
+        width: 100%
 
 .padlock
     position: fixed
     bottom: 0
     left: 0
     margin: 1rem
+    @include mixins.quebra3 
+        display: none
